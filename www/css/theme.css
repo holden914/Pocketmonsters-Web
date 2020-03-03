@@ -1,0 +1,161 @@
+:root {
+    --mdc-theme-primary: #e53935;
+    --mdc-theme-primary-dark: #ab000d;
+    --mdc-theme-secondary: #D81B60;
+    --mdc-theme-background: #fff;
+    --mdc-theme-surface: #fff;
+    --mdc-theme-error: #b00020;
+    --mdc-theme-on-primary: #fff;
+    --mdc-theme-on-secondary: #fff;
+    --mdc-theme-on-surface: #000;
+    --mdc-theme-on-error: #fff;
+    --mdc-theme-text-primary-on-background: rgba(0, 0, 0, 0.87);
+    --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
+    --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-icon-on-background: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-primary-on-light: rgba(0, 0, 0, 0.87);
+    --mdc-theme-text-secondary-on-light: rgba(0, 0, 0, 0.54);
+    --mdc-theme-text-hint-on-light: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-disabled-on-light: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-icon-on-light: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-primary-on-dark: white;
+    --mdc-theme-text-secondary-on-dark: rgba(255, 255, 255, 0.7);
+    --mdc-theme-text-hint-on-dark: rgba(255, 255, 255, 0.5);
+    --mdc-theme-text-disabled-on-dark: rgba(255, 255, 255, 0.5);
+    --mdc-theme-text-icon-on-dark: rgba(255, 255, 255, 0.5);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+    margin: 0px;
+    min-width: 280px;
+}
+
+.headline-brand {
+    font-family: 'Lilita One', cursive;
+    font-size: 22px;
+    padding-left: 4px;
+}
+
+.headline-big {
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+    font-size: 28px;
+    color: #757575;
+}
+
+.headline-small {
+    font-family: 'Lilita One', cursive;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.caption {
+    font-size: 14px;
+    font-family: 'Lilita One', sans-serif;
+    font-style: normal;
+    color: #212121;
+}
+
+.caption-light {
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    color: #212121;
+}
+
+.mdc-button {
+    font-family: 'Lato';
+    font-weight: lighter;
+    font-size: 12px;
+    width: 100%;
+    margin: 6px 0px 6px 0px;
+}
+
+.mdc-card {
+    border-radius: 25px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    margin: 0px;
+}
+
+p.title {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+/*
+.material-icons {
+    color: var(--mdc-theme-primary);
+}
+*/
+
+.material-icons.md-32 {
+    font-size: 32px !important;
+    height: 32px !important;
+    width: 32px !important;
+}
+
+.material-icons.md-64 {
+    font-size: 64px !important;
+    height: 64px !important;
+    width: 64px !important;
+}
+
+.material-icons.md-85 {
+    font-size: 85px !important;
+    height: 85px !important;
+    width: 85px !important;
+}
+
+.material-icons.md-128 {
+    font-size: 128px !important;
+    height: 128px !important;
+    width: 128px !important;
+}
+
+.opacity-layer {
+    background-color: black;
+    opacity: 0.5;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.header-container {
+    margin: 42px 0px 24px 0px;
+}
+
+.cards-container {
+    margin: 0px 16px 0px 16px;
+}
+
+.navigation-container {
+    margin: auto 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.object-image {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    margin-bottom: 2px;
+}

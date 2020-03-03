@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import "./theme.css";
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header-container {
+    margin: 42px 0px 24px 0px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 24px 0px 24px;
+}
+
+.fight-results-container {
+    margin: 16px;
+    align-content: center;
+}
+
+.fight-results-container p {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.navigation-container {
+    margin: auto 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-button {
+    display: none;
+}
+
+#rankings-button {
+    display: none;
+}
+
+#progress-bar {
+    margin: 18px auto 32px auto;
+    width: 70%;
+}
+
+.mdc-linear-progress__buffer {
+    background-color: white;
+}
+
+.move-up {
+    object-position: 5px;
+}
+
+.move-down {
+    object-position: 5px;
+}
+
+.opacity-layer {
+    background-color: unset;
+    opacity: 0.2;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}

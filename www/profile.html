@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />-->
+
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <title>Pocketmonsters</title>
+</head>
+
+<body class="body-container">
+
+    <header class="header-container">
+
+        <div class="headline-big">Il tuo profilo</div>
+
+    </header>
+
+    <div class="cards-container">
+
+        <div class="mdc-card">
+            <i id="edit-button" class="mdc-fab__icon material-icons">edit</i>
+            <image src="./img/round_person.png" id="user-image" class="object-image"></image>
+            <p class="caption" id="user-name">Tu</p>
+            <p class="caption-light" id="user-lp">Punti vita:</p>
+            <p class="caption-light" id="user-xp">Punti esperienza:</p>
+        </div>
+    </div>
+
+    <div class="customize-container">
+
+        <p class="headline-small">Personalizza</p>
+
+        <div class="mdc-text-field mdc-text-field--outlined">
+            <input type="text" id="textfield-username" class="mdc-text-field__input">
+            <div class="mdc-notched-outline">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch">
+                    <label for="tf-outlined" class="mdc-floating-label">Nome utente</label>
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+            </div>
+        </div>
+        
+
+
+
+        <button class="mdc-button mdc-button--outlined" id="user-image-button">
+            <span class="mdc-button__ripple"></span>
+            <span class="label">Immagine del profilo</span>
+        </button>
+
+        <hr>
+
+        <button class="mdc-button mdc-button--outlined" id="save-button" disabled>
+            <span class="mdc-button__ripple"></span>Salva modifiche
+        </button>
+
+    </div>
+
+    <div class="navigation-container">
+
+        <button class="mdc-button mdc-button--outlined" id="rankings-button">
+            <span class="mdc-button__ripple"></span> 
+            <span class="mdc-button__label">Vai alla classifica</span>
+        </button>
+
+        <button class="mdc-button mdc-button--raised" id="close-button">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Torna alla mappa</span>
+        </button>
+    </div>
+
+    <div class="mdc-snackbar" id="snackbar">
+        <div class="mdc-snackbar__surface">
+            <div class="mdc-snackbar__label" role="status" aria-live="polite">
+            </div>
+            <div class="mdc-snackbar__actions">
+                <button type="button" class="mdc-button mdc-snackbar__action">
+                    <div class="mdc-button__ripple"></div>
+                    <span class="mdc-button__label">Retry</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script type="text/javascript" src="js/utilities.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
+</body>
+
+</html>
