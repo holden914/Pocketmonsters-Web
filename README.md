@@ -1,4 +1,4 @@
-# Project Title
+# Pocketmonsters Web
 
 Pocketmonsters: simple Phonegap mobile game. 
 
