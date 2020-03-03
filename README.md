@@ -16,4 +16,3 @@ phonegap run android
 ### Prerequisites
 
 Executing the game will require you to have npm and phonegap installed. 
-```
