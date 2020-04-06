@@ -32,21 +32,22 @@ function onDeviceReady() {
 
     $('#save-button').click(function() {
 
-        let user = getUser();
-
-        if (user != null) {
+        if (getUser() != null) {
 
             if (checkUserName()) {
 
                 let username = $('#textfield-username').val();
+                let user_image = $('#user-image').attr("src");
+
                 if (username.length == 0)
                     username == null;
 
-                let user_image = $('#user-image').attr("src");
-                if (!user_image.includes("round_person")) 
+                if (!user_image.includes("round_person")) {
                     user_image = user_image.split("base64,")[1];
-                else 
+                    console.log(user_image);
+                } else {
                     user_image = null;
+                }
 
                 updateUserInfoRemote(username, user_image)
                 .done(function(result) {
@@ -60,7 +61,7 @@ function onDeviceReady() {
                     showSnackbar("Qualcosa è andato storto", "Ok");
                 });
             } else {
-                showSnackbar("Qualcosa è andato storto", "Ok");
+                showSnackbar("Scegli un nome utente di almeno 3 caratteri", "Ok");
             }
         } else {
             showSnackbar("Utente non disponibile", "Ok");
@@ -104,7 +105,7 @@ function updateUI() {
         }
         
         if (user.base64image != null) {
-            $("#user-image").attr("src", "data:image/jpg;base64," + user.base64image);
+            $("#user-image").attr("src", "data:image/png;base64," + user.base64image);
         }
 
     } else {
@@ -114,13 +115,16 @@ function updateUI() {
 
 function getPhoto(source) {
     // Retrieve image file location from specified source
-    navigator.camera.getPicture(onSuccess, onFail, {
-      sourceType: source });
+    navigator.camera.getPicture(onSuccess, onFail, 
+        { 
+            quality: 50, 
+            sourceType: source,
+            destinationType: Camera.DestinationType.DATA_URL
+        }
+    ); 
 }
 
 function onSuccess(imageData) {
-
-    console.log(imageData);
 
     user_image = imageData;
 

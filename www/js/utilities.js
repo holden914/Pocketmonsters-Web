@@ -1,10 +1,11 @@
+const get_session_url = "https://ewserver.di.unimi.it/mobicomp/mostri/register.php";
 const get_map_url = "https://ewserver.di.unimi.it/mobicomp/mostri/getmap.php";
 const get_image_url = "https://ewserver.di.unimi.it/mobicomp/mostri/getimage.php";
 const set_profile_url = "https://ewserver.di.unimi.it/mobicomp/mostri/setprofile.php";
 const request_fight_result_url = "https://ewserver.di.unimi.it/mobicomp/mostri/fighteat.php";
 const request_rankings_url = "https://ewserver.di.unimi.it/mobicomp/mostri/ranking.php";
 
-// PAGES HISTORY
+/* PAGES HISTORY */
 
 console.log(location.pathname);
 
@@ -22,7 +23,7 @@ if (sessionStorage.getItem("pages_history") == null) {
 }
 
 
-// LOCAL
+/* LOCAL */
 
 function getMapObjectWithId(id) {
 
@@ -95,7 +96,7 @@ function updateUserStatsLocal(stats) {
 } 
 
 
-// REMOTE 
+/* REMOTE */
 
 function requestMap() {
     return $.ajax({
