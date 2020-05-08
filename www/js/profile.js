@@ -44,7 +44,6 @@ function onDeviceReady() {
 
                 if (!user_image.includes("round_person")) {
                     user_image = user_image.split("base64,")[1];
-                    console.log(user_image);
                 } else {
                     user_image = null;
                 }

@@ -154,8 +154,8 @@ function hideModal() {
         map.set('gestureHandling', 'greedy');
 
         // reset modal progress bar and distance message
-        progress_bar.determinate = true;
-        progress_bar.progress = 0;
+        //progress_bar.determinate = true;
+        //progress_bar.progress = 0;
         $('#object-distance-message').text("");
     }
 }
@@ -377,7 +377,7 @@ function haversine_distance(origin, destination) {
 
 function fightEat() {
 
-    progress_bar.determinate = false;
+    //progress_bar.determinate = false;
 
     let object_id = $("#object-id").text();
     if ($('#fighteat-button').find("span").text() == "Combatti") {
@@ -404,8 +404,8 @@ function fightEat() {
                     $(this).removeAttr('style');
                 });
 
-                progress_bar.determinate = true;
-                progress_bar.progress = 1;
+                //progress_bar.determinate = true;
+                //progress_bar.progress = 1;
 
                 hideModal();
                 removeMapObjectWithId(object_id);

@@ -10,7 +10,7 @@ function onDeviceReady() {
     }
 
     progress_bar = mdc.linearProgress.MDCLinearProgress.attachTo(document.getElementById('progress-bar'));
-    progress_bar.determinate = false;
+    //progress_bar.determinate = false;
 
     $('#close-button').click(function() {
         goBack();
@@ -21,7 +21,7 @@ function onDeviceReady() {
     .done(function(result) {
         let rankings = JSON.parse(result).ranking;
 
-        progress_bar.determinate = true;
+        //progress_bar.determinate = true;
 
         for (user of rankings) {
             
