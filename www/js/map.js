@@ -221,6 +221,8 @@ function observeGeolocationChanges() {
 
 
 function onDeviceReady() {
+    console.log(cordova);
+
     permissions = cordova.plugins.permissions;
     geolocationPermission = false;
 
@@ -330,7 +332,8 @@ function updateModalUI(target) {
 
     let distance = parseInt(haversine_distance(origin, destination));
 
-    if (distance <= 50) {
+    if (distance <= 1e+100) { 
+    //if (distance <= 50) {
         $('#fighteat-button').prop('disabled', false);
         $('#object-distance').css('color', 'green');
     } else {
@@ -370,11 +373,6 @@ function haversine_distance(origin, destination) {
     var d = R * c;
     return d;
 }
-
-
-
-
-
 
 
 function fightEat() {
